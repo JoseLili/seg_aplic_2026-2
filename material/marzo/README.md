@@ -37,68 +37,108 @@
     vulnerabilidades detectadas) a una _defensa proactiva_ (anticipar y
     detectar campañas de ataque).
 
-     - [Lockheed Martin Cyber Kill
-       Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
-       (_Cadena de Ataque Cibernético_) desarrollado como parte del modelo
-       /Intelligence Driven Defense/ para identificar y prevenir actividad
-       de intrusiones (2011). Identifica los pasos que un adversario debe
-       seguir para montar un reto APT (/Advanced Persistent Threat/), para
-       ayudar al defensor a _romper la cadena_:
+    - [Lockheed Martin Cyber Kill
+      Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+      (_Cadena de Ataque Cibernético_) desarrollado como parte del modelo
+      /Intelligence Driven Defense/ para identificar y prevenir actividad
+      de intrusiones (2011). Identifica los pasos que un adversario debe
+      seguir para montar un reto APT (/Advanced Persistent Threat/), para
+      ayudar al defensor a _romper la cadena_:
 
-	   1. Reconocimiento
-	   2. Armamento o _armificación_ (_weaponization_)
-	   3. Entrega
-	   4. Explotación
-	   5. Instalación
-	   6. Control y Comando (C2)
-	   7. Acción sobre los objetivos
+	  1. Reconocimiento
+	  2. Armamento o _armificación_ (_weaponization_)
+	  3. Entrega
+	  4. Explotación
+	  5. Instalación
+	  6. Control y Comando (C2)
+	  7. Acción sobre los objetivos
 
-	   Ojo: Hay críticas importantes al modelo:
+	  Ojo: Hay críticas importantes al modelo:
 
-	   1. Es un modelo muy _lineal y secuencial_
-       2. Se enfoca demasiado en APTs, omite muchos otros tipos de amenaza,
-          incluyendo ataques internos o robos de identidad
-       3. Falta de contexto post-explotación
+	  1. Es un modelo muy _lineal y secuencial_
+      2. Se enfoca demasiado en APTs, omite muchos otros tipos de amenaza,
+         incluyendo ataques internos o robos de identidad
+      3. Falta de contexto post-explotación
 
-     - [Microsoft
-       STRIDE](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats#stride)
-       ayuda a modelar y clasificar amenazas y ataques para tenerlos
-       presentes de forma preventiva, enfocado a aplicarlo conforme se
-       **desarrolla** un sistema (y no cuando éste ya está
-       **desplegado**). STRIDE toma su nombre de _**S**poofing,
-       **T**ampering, **R**epudiation, **I**nformation disclosure,
-       **D**enial of service, **E**levation of privileges_, las seis
-       categorías de amenazas que un desarrollador debe considerar al
-       desarrollar cualquier componente.
+    - [Microsoft
+      STRIDE](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats#stride)
+      ayuda a modelar y clasificar amenazas y ataques para tenerlos
+      presentes de forma preventiva, enfocado a aplicarlo conforme se
+      **desarrolla** un sistema (y no cuando éste ya está
+      **desplegado**). STRIDE toma su nombre de _**S**poofing,
+      **T**ampering, **R**epudiation, **I**nformation disclosure,
+      **D**enial of service, **E**levation of privileges_, las seis
+      categorías de amenazas que un desarrollador debe considerar al
+      desarrollar cualquier componente.
 
-	   Para aplicar STRIDE es necesario seguir una metodología de
-       desarrollo con un componente visual, como lo hace la [Herramienta de
-       Modelado de
-       Amenazas](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started),
-       en que cada uno de los tipos de objeto representados _responde_ a
-       determinadas categorías de amenazas (Procesos (Círculos) ⇒
-       T,R,I,D,E; Flujos de Datos (Flechas) ⇒ T,I,D; Almacenes de Datos
-       (Líneas) ⇒ T,R,I y a veces D; Entidades Externas (Rectángulos) ⇒ S).
+	  Para aplicar STRIDE es necesario seguir una metodología de desarrollo
+      con un componente visual, como lo hace la [Herramienta de Modelado de
+      Amenazas](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-getting-started),
+      en que cada uno de los tipos de objeto representados _responde_ a
+      determinadas categorías de amenazas (Procesos (Círculos) ⇒ T,R,I,D,E;
+      Flujos de Datos (Flechas) ⇒ T,I,D; Almacenes de Datos (Líneas) ⇒
+      T,R,I y a veces D; Entidades Externas (Rectángulos) ⇒ S).
 
-     - [MITRE ATT&CK](https://attack.mitre.org/) _Adversarial Tactics,
-       Techniques, and Common Knowledge_ (2013–, actualización bianual)
-       detalla técnicas para distintos entornos, describiendo el /cómo/ y
-       /por qué/ de /cada paso/ en el ciclo de vida de un ataque.
+    - [MITRE ATT&CK](https://attack.mitre.org/) _Adversarial Tactics,
+      Techniques, and Common Knowledge_ (2013–, actualización bianual)
+      detalla técnicas para distintos entornos, describiendo el /cómo/ y
+      /por qué/ de /cada paso/ en el ciclo de vida de un ataque.
 
-	   Surge de cierta manera reaccionando ante el _Cyber Kill Chain_,
-       describiendo el modelo de ataque ya no como una _cadena_, sino como
-       un _laberinto_, con múltiples posibilidades a cada paso. Si Cyber
-       Kill Chain da las 7 fases de un crimen (vigilar, entrar, robar,
-       huir...), ATT&CK es el manual que usan los detectives, lleno de
-       huellas dactilares, _modus operandi_ de cada ladrón, las
-       herramientas que usan para forzar cerraduras y cómo se mueven dentro
-       de la casa una vez que han entrado, etc.
+	  Surge de cierta manera reaccionando ante el _Cyber Kill Chain_,
+      describiendo el modelo de ataque ya no como una _cadena_, sino como
+      un _laberinto_, con múltiples posibilidades a cada paso. Si Cyber
+      Kill Chain da las 7 fases de un crimen (vigilar, entrar, robar,
+      huir...), ATT&CK es el manual que usan los detectives, lleno de
+      huellas dactilares, _modus operandi_ de cada ladrón, las herramientas
+      que usan para forzar cerraduras y cómo se mueven dentro de la casa
+      una vez que han entrado, etc.
 
-	   Se ha convertido en el estándar de facto para describir el
-       comportamiento de los atacantes después de la intrusión inicial. Es
-       una matriz detallada de tácticas (el "por qué") y técnicas (el
-       "cómo") que los adversarios utilizan.
+	  Se ha convertido en el estándar de facto para describir el
+      comportamiento de los atacantes después de la intrusión inicial. Es
+      una matriz detallada de tácticas (el "por qué") y técnicas (el
+      "cómo") que los adversarios utilizan.
 
-     - [MITRE D3FEND](https://d3fend.mitre.org/) siguiente paso natural de
-       ATT&CK: «gráfica de conocimiento de contramedidas de ciberseguridad»
+3. `2026.03.10`
 
+	**Modelos de ataque** (continúa)
+
+    - [MITRE D3FEND](https://d3fend.mitre.org/) siguiente paso natural de
+      ATT&CK: «gráfica de conocimiento de contramedidas de ciberseguridad»
+
+	  D3FEND parte de una matriz similar a la de ATT&CK, pero los
+      encabezados de primer nivel van relacionados a las necesidades de
+      defensa (modelar, fortalecer, detectar, aislar, engañar, eliminar,
+      restaurar). Genera además un modelo gráfico y navegable de
+      _relaciones inferidas_ entre acciones defensivas, acciones ofensivas
+	  y objetos de sistema, y para cada categoría vincula a fuentes de
+      información (artículos académicos, patentes, artículos en Web,
+      lineamientos, referencias técnicas etc.) relacionados.
+
+	- [_Common Vulnerabilities Enumeration_ (CVE)](https://www.cve.org) es
+      una base de datos de vulnerabilidades específicas, en software
+      específico (y en _versiones_ específicas), que se elabora [desde
+      1999](https://www.cve.org/Resources/General/Towards-a-Common-Enumeration-of-Vulnerabilities.pdf)
+      y es gestionado (¡también!) por MITRE. Busca dar una _nomenclatura
+      consistente_ a las vulnerabilidades reportadas, mantener una base de
+      datos de _vulnerabilidades similares_, atender _múltiples
+      perspectivas sobre la evolución_ de cada vulnerabilidad, y proveer un
+      mapeo entre bases de datos del campo.
+
+	  Al día de hoy, CVE es un estándar donde desarrolladores y usuarios de
+      software y de infraestructura dan seguimiento a los reportes sobre
+      sus productos; hay un [proceso para la publicación y
+      seguimiento](https://www.cve.org/About/Process) de estos reportes.
+
+	- [CWE](https://cwe.mitre.org/) (_Common Weaknessses Enumeration_) es
+      otra base de datos mantenida por MITRE, enumerando la _clase de
+      fallos_ que permite cada una de las vulnerabilidades detalladas por
+      CVE. Presentan una taxonomía jerárquica de vulnerabilidades.
+
+	  Los ejemplos de CWE frecuentemente incluyen código mínimo
+      demostrativo. Me parece interesante que presenta _notas de mapeo de
+      vulnerabilidad_, para referencias cruzadas con otras bases de datos;
+      uno de los vectores de clasificación es si el uso para mapeo es
+      _permitido_ (si es suficientemente específico) o _prohibido_ (si es
+      demasiado general,
+      p.ej. [CWE-1076](https://cwe.mitre.org/data/definitions/1076.html),
+      [CWE-1101](https://cwe.mitre.org/data/definitions/1101.html)).

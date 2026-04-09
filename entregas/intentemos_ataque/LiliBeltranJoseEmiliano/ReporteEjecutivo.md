@@ -16,7 +16,7 @@ El análisis del PoC mostró que este simula un cliente SSH mínimo: intercambia
 
 - **CVE:** CVE-2025-32433
 - **Software afectado:** Erlang/OTP SSH
-- **Versión vulnerable usada en laboratorio:** `vulhub/erlang:27.3.2-with-ssh`
+- **Versión vulnerable usada en laboratorio:** `[vulhub/erlang:27.3.2-with-ssh](https://github.com/vulhub/vulhub/tree/master/erlang/CVE-2025-32433)` 
 - **Puerto expuesto en el escenario:** `2222/tcp`
 - **Naturaleza del impacto:** Ejecución remota de código sin autenticación
 - **Versiones corregidas reportadas públicamente:** 27.3.3, 26.2.5.11 y 25.3.2.20
@@ -400,7 +400,7 @@ La evidencia obtenida muestra que el servidor SSH vulnerable de Erlang/OTP puede
 ## 16. Referencias
 
 - Advisory oficial de Erlang/OTP para CVE-2025-32433
-- Escenario de Vulhub: `erlang/CVE-2025-32433`
+- Escenario de Vulhub: `[erlang/CVE-2025-32433](https://github.com/vulhub/vulhub/tree/master/erlang/CVE-2025-32433)`
 - RFC 4254 — The Secure Shell (SSH) Connection Protocol
 - Traza de conexión SSH observada durante el laboratorio
 - Código PoC analizado (`exploit.py`)
